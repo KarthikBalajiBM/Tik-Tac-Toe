@@ -11,32 +11,32 @@ def win():
 
         cur=set(grid[i])
         if len(cur)==1 and grid[i][0]=="O":
-            print("Player 1 wins")
+            print("Player 1 win")
             return True
         elif len(cur)==1 and grid[i][0]=="X":
-            print("Player 2 wins")
+            print("Player 2 win")
             return True
     for i in range(3):
         cur=set([grid[j][i] for j in range(3)])
         if len(cur)==1 and grid[0][i]=="O":
-            print("Player 1 wins")
+            print("Player 1 win")
             return True
         elif len(cur)==1 and grid[0][i]=="X":
-            print("Player 2 wins")
+            print("Player 2 win")
             return True
     cur=set([grid[i][i] for i in range(3)])
     if len(cur)==1 and grid[0][0]=="O":
-        print("Player 1 wins")
+        print("Player 1 win")
         return True
     elif len(cur)==1 and grid[0][0]=="X":
-        print("Player 2 wins")
+        print("Player 2 win")
         return True
     cur=set([grid[i][2-i] for i in range(3)])
     if len(cur)==1 and grid[0][2]=="O":
-        print("Player 1 wins")
+        print("Player 1 win")
         return True
     elif len(cur)==1 and grid[0][2]=="X":
-        print("Player 2 wins")
+        print("Player 2 win")
         return True
     return False
 def draw():
